@@ -46,11 +46,8 @@ module.exports.routes = {
     view:'inicioEventos'
   },
 
-  'get /detalleEvento':{
-    view:'detalleEvento'
-  },
-
   'get /inicio': 'VistaController.inicioEventos',
+  'get /detalleEvento': 'EventoController.detalleEvento',
 
   'get /login': 'AuthController.login',
   'get /logout': 'AuthController.logout',
