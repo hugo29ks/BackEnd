@@ -11,17 +11,21 @@
     <a href="#" class="list-group-item">Third item</a>
   </div>
 
-<div id="map" style="width:100%;height:400px;"></div>
+<div id="map" style="width:500px;height:400px;"></div>
   <script>
-    var map;
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
+    function myMap() {
+      var mapCanvas = document.getElementById("map");
+      var myCenter = new google.maps.LatLng(-0.186799,-78.479527);
+      var mapOptions = {center: myCenter, zoom: 15};
+      var map = new google.maps.Map(mapCanvas,mapOptions);
+      var marker = new google.maps.Marker({
+        position: myCenter,
+        animation: google.maps.Animation.BOUNCE
       });
+      marker.setMap(map);
     }
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmx8gRaiFnyKC5jR8xnnpAn_BEQd1ee3s&callback=initMap"
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmx8gRaiFnyKC5jR8xnnpAn_BEQd1ee3s&callback=myMap"
           async defer></script>
 
 
