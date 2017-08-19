@@ -1,0 +1,43 @@
+<h1>Registrate aquí</h1>
+<h2>Es fácil, solo llena los datos que se te solicitan</h2>
+
+<div class="container">
+  <form action="/Persona/crearPersona" method="post">
+    <div class="form-group row">
+      <label for="nombrePersona" class="col-4 col-form-label">Nombre:</label>
+      <div class="col-8">
+        <input type="text" class="form-control"
+               name="nombrePersona" id="nombrePersona" >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="apellidoPersona" class="col-4 col-form-label">Apellido:</label>
+      <div class="col-10">
+        <input class="form-control" type="text"
+               name="apellidoPersona"
+               id="apellidoPersona">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="emailPersona" class="col-4 col-form-label">Email:</label>
+      <div class="col-10">
+        <input class="form-control" type="email"
+               name="emailPersona"
+               id="emailPersona">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="telefonoPersona" class="col-4 col-form-label">Telefono:</label>
+      <div class="col-10">
+        <input class="form-control" type="number"
+               name="telefonoPersona"
+               id="telefonoPersona">
+      </div>
+    </div>
+    <button
+      class="btn btn-outline-success">Crear</button>
+  </form>
+</div>

@@ -1,0 +1,42 @@
+<br>
+<br>
+<form action="/Vista/inicioEventos">
+  <div class="form-group row">
+    <label for="busqueda" class="col-4 col-form-label">
+      Busque por Nombre del Evento
+    </label>
+    <div class="col-4">
+      <input class="form-control" type="text" placeholder="Buscar" id="busqueda"
+             name="busqueda">
+    </div>
+    <button ><img src="https://image.freepik.com/iconos-gratis/buscar-lupa_318-73229.jpg" height="25px" width="25px" alt=""></button>
+  </div>
+
+</form>
+<br>
+
+<div id="contenedor" class="row">
+
+  <div class="list-group" class="col-md-4">
+    <a href="#" class="list-group-item active">First item</a>
+    <a href="#" class="list-group-item">Second item</a>
+    <a href="#" class="list-group-item">Third item</a>
+  </div>
+
+  <% for(var i=0;i<eventos.length;i++){ %>
+  <div class="col-md-4">
+  <div class="card">
+    <img class="card-img-top" src="<%= eventos[i].imagenEvento%>" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title"><%= eventos[i].nombreEvento%></h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Ver Evento</a>
+    </div>
+  </div>
+  </div>
+  <% } %>
+
+
+
+
+</div>

@@ -1,0 +1,141 @@
+<html lang="es">
+<head>
+
+</head>
+<body>
+<h1>Eventos</h1>
+<h2>Registra aquí tus eventos</h2>
+<div class="container">
+  <form action="/Evento/crearEvento" method="post">
+    <div class="form-group row">
+      <label for="nombreEvento" class="col-4 col-form-label">Nombre:</label>
+      <div class="col-8">
+        <input type="text" class="form-control"  id="nombreEvento" name="nombreEvento" >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="fechaEvento" class="col-4 col-form-label">Fecha:</label>
+      <div class="col-10">
+        <input class="form-control" type="date"
+               name="fechaEvento"
+               id="fechaEvento">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="horaInicio" class="col-4 col-form-label">Hora de Inicio:</label>
+      <div class="col-10">
+        <input class="form-control" type="time"
+               name="horaInicio"
+               id="horaInicio">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="horaFin" class="col-4 col-form-label">Hora de Finalización:</label>
+      <div class="col-10">
+        <input class="form-control" type="time"
+               name="horaFin"
+               id="horaFin">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="detalleEvento" class="col-4 col-form-label">Detalle :</label>
+      <div class="col-10">
+        <input class="form-control" type="text"
+               name="detalleEvento"
+               id="detalleEvento">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="nombreLugar" class="col-4 col-form-label">Nombre Lugar:</label>
+      <div class="col-10">
+        <input class="form-control" type="text"
+               name="nombreLugar"
+               id="nombreLugar">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="precio" class="col-4 col-form-label">Precio de Entradas:</label>
+      <div class="col-10">
+        <input class="form-control" type="text"
+               name="precio"
+               id="precio">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="fkIdCategoria" class="col-4 col-form-label">Seleccione una categoría:</label>
+      <div class="col-10">
+        <input class="form-control" type="number"
+               name="fkIdCategoria"
+               id="fkIdCategoria">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="fkIdOrganizador" class="col-4 col-form-label">Seleccione un organizador:</label>
+      <div class="col-10">
+        <input class="form-control" type="number"
+               name="fkIdOrganizador"
+               id="fkIdOrganizador">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="fkIdTipoEvento" class="col-4 col-form-label">Tipo de Evento:</label>
+      <div class="col-10">
+        <input class="form-control" type="number"
+               name="fkIdTipoEvento"
+               id="fkIdTipoEvento">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="direccion" class="col-4 col-form-label">Direccion:</label>
+      <div class="col-10">
+        <input class="form-control" type="text"
+               name="direccion"
+               id="direccion">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="latitud" class="col-4 col-form-label">Latitud:</label>
+      <div class="col-10">
+        <input class="form-control" type="number"
+               name="latitud"
+               id="latitud">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="longitud" class="col-4 col-form-label">Longitud:</label>
+      <div class="col-10">
+        <input class="form-control" type="number"
+               name="longitud"
+               id="longitud">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="imagenEvento" class="col-4 col-form-label">URL Imagen Evento:</label>
+      <div class="col-10">
+        <input class="form-control" type="text"
+               name="imagenEvento"
+               id="imagenEvento">
+      </div>
+    </div>
+
+
+    <button
+      class="btn btn-outline-success">Crear</button>
+
+  </form>
+</div>
+</body>
+
