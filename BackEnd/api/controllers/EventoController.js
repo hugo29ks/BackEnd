@@ -42,18 +42,29 @@ module.exports = {
 
   detalleEvento: function (req, res) {
     var parametros = req.allParams();
-    Evento.find({id:parametros.id})
-      .exec(function (err,evento) {
-        if(err){
-          return res.serverError(err);
-        }else{
-          return res.view('detalleEvento', {
-            evento: evento
-          });
-        }
+    if (parametros.id) {
+      Evento.findOne({
+        id: parametros.id
       })
+        .exec(function (err, eventoEncontrado) {
+          if (err)
+            return res.serverError(err);
+          if (eventoEncontrado) {
+            //Si encontro
+            return res.view('detalleEvento', {
+              evento: eventoEncontrado
+            });
+          }
+          else {
+            //No encontro
+            return res.redirect('/inicio');
+          }
+        });
+    }
+    else {
+      return res.redirect('/crearUsuario');
+    }
   }
-
 
 
 
