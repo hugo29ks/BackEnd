@@ -1,5 +1,7 @@
 <br>
 <center><h1>DETALLES DEL EVENTO <%= evento.nombreEvento%></h1></center>
+<h2 id="latitud" style="display: none"><%= evento.latitud%></h2>
+<h2 id="longitud" style="display: none"><%= evento.longitud%></h2>
 <br>
 
 
@@ -15,9 +17,12 @@
 
 <div id="map" style="width:500px;height:400px;"></div>
   <script>
+
     function myMap() {
+      var latitud = document.getElementById("latitud").innerHTML;
+      var longitud = document.getElementById("longitud").innerHTML;
       var mapCanvas = document.getElementById("map");
-      var myCenter = new google.maps.LatLng(-0.186799,-78.479527);
+      var myCenter = new google.maps.LatLng(latitud,longitud);
       var mapOptions = {center: myCenter, zoom: 15};
       var map = new google.maps.Map(mapCanvas,mapOptions);
       var marker = new google.maps.Marker({
@@ -28,7 +33,7 @@
     }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmx8gRaiFnyKC5jR8xnnpAn_BEQd1ee3s&callback=myMap"
-          async defer></script>
+         ></script>
 
 
 </div>
