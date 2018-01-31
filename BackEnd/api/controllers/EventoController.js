@@ -62,7 +62,7 @@ module.exports = {
         });
     }
     else {
-      return res.redirect('/crearUsuario');
+      return res.redirect('/inicio');
     }
   }
 

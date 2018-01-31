@@ -47,6 +47,7 @@ module.exports.routes = {
   },
 
   'get /inicio': 'VistaController.inicioEventos',
+  'get /inicio': 'VistaController.buscarPorCategoria',
   'get /detalleEvento': 'EventoController.detalleEvento',
 
   'get /login': 'AuthController.login',

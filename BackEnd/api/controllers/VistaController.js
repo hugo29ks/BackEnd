@@ -63,4 +63,42 @@ module.exports = {
         }
       });
   },
+
+  buscarPorCategoria:function(req,res){
+
+    var parametros = req.allParams();
+
+    /*Evento.find().exec(
+     function(err, eventosEncontrados){
+     if (err){
+     return res.serverError(err);
+     }else{
+     return res.view('inicioEventos',{eventos:eventosEncontrados})
+     }
+
+     }*/
+
+    if (parametros.id) {
+      Evento.find({
+        fkIdCategoria: parametros.fkIdCategoria
+      })
+        .exec(function (err, eventosEncontrado) {
+          if (err)
+            return res.serverError(err);
+          if (eventosEncontrado) {
+            //Si encontro
+            return res.view('inicio', {
+              eventosCategoria: eventosEncontrado
+            });
+          }
+          else {
+            //No encontro
+            return res.redirect('/inicio');
+          }
+        });
+    }
+    else {
+      return res.redirect('/inicio');
+    }
+  }
 }
